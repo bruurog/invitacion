@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Netflix</title>
+    <link rel="icon" type="image/png" href="assets/logos/logo2.png" />
+    <link rel="apple-touch-icon" href="assets/logos/logo2.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="screen welcome-screen" aria-label="Portada de Netflix">
+        <div class="media-frame welcome-screen__backdrop">
+          <img src="assets/principal/fondo-prueba.png" alt="Collage de películas y series de Netflix" />
+          <div class="media-fallback poster-collage" aria-hidden="true"></div>
+        </div>
+
+        <header class="topbar topbar--public">
+          <a class="netflix-logo" href="index.html" aria-label="Netflix">
+            <img src="assets/logos/logo.png" alt="Netflix" />
+          </a>
+          <div class="topbar__actions">
+            <button class="language-button" type="button" aria-label="Cambiar idioma">
+              <span class="language-button__icon" aria-hidden="true">A</span>
+              Español
+              <span class="chevron" aria-hidden="true"></span>
+            </button>
+            <a class="signin-button" href="perfiles.html">Iniciar sesión</a>
+          </div>
+        </header>
+
+        <div class="welcome-screen__content">
+          <h1>Peleas y perdones ilimitados y mucho más</h1>
+          <p class="welcome-screen__price">A partir de $0. No canceles nunca por completo xfa.</p>
+          <p class="welcome-screen__lead">
+            ¿Quieres ver Netflix ya? Ingresa a tu Roku, invitame que voy a estar siempre.
+          </p>
+          <form class="email-form" data-email-form data-next-page="perfiles.html">
+            <label class="sr-only" for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="Email" autocomplete="email" />
+            <button class="primary-cta" type="submit">
+              Empezar
+              <span class="arrow-icon" aria-hidden="true"></span>
+            </button>
+          </form>
+        </div>
+
+        <div class="welcome-curve" aria-hidden="true"></div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

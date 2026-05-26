@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Netflix</title>
+    <link rel="icon" type="image/png" href="assets/logos/logo2.png" />
+    <link rel="apple-touch-icon" href="assets/logos/logo2.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="screen profiles-screen" aria-label="Selección de perfiles">
+        <div class="profiles-mobile-showcase" aria-hidden="true">
+          <video src="assets/principal/video-fondo.mp4" autoplay muted loop playsinline preload="metadata"></video>
+          <div class="profiles-mobile-showcase__copy">
+            <div class="profiles-mobile-showcase__logo">
+              <img src="assets/logos/logo.png" alt="" />
+              <strong>Déjate amar</strong>
+            </div>
+            <p>Disponible ahora</p>
+          </div>
+        </div>
+        <div class="profiles-screen__content">
+          <h1>
+            <span class="profiles-title-desktop">¿Quién está viendo ahora?</span>
+            <span class="profiles-title-mobile">Elige tu perfil</span>
+          </h1>
+          <ul class="profiles-list" aria-label="Perfiles disponibles">
+            <li>
+              <button
+                class="profile-card"
+                type="button"
+                data-next-page="inicio.html"
+                data-profile-name="Marcelo"
+                data-profile-image="assets/perfiles/marce.jpg"
+                data-profile-position="48% 42%"
+              >
+                <span class="media-frame profile-avatar profile-avatar--marce">
+                  <img src="assets/perfiles/marce.jpg" alt="Avatar de Marcelo" />
+                  <span class="media-fallback avatar-face" aria-hidden="true"></span>
+                </span>
+                <span class="profile-card__name">Marcelo</span>
+              </button>
+            </li>
+            <li>
+              <button
+                class="profile-card"
+                type="button"
+                data-next-page="inicio.html"
+                data-profile-name="Mamucha"
+                data-profile-image="assets/perfiles/noni.jpg"
+                data-profile-position="62% 42%"
+              >
+                <span class="media-frame profile-avatar profile-avatar--mamucha">
+                  <img src="assets/perfiles/noni.jpg" alt="Avatar de Mamucha" />
+                  <span class="media-fallback avatar-face" aria-hidden="true"></span>
+                </span>
+                <span class="profile-card__name">Mamucha</span>
+              </button>
+            </li>
+            <li>
+              <button
+                class="profile-card"
+                type="button"
+                data-next-page="inicio.html"
+                data-profile-name="Ro y Mati"
+                data-profile-image="assets/perfiles/ro.png"
+                data-profile-position="50% 50%"
+              >
+                <span class="media-frame profile-avatar profile-avatar--ro">
+                  <img src="assets/perfiles/ro.png" alt="Avatar de Ro y Mati" />
+                  <span class="media-fallback avatar-portrait" aria-hidden="true"></span>
+                </span>
+                <span class="profile-card__name">Ro y Mati</span>
+              </button>
+            </li>
+            <li>
+              <button
+                class="profile-card"
+                type="button"
+                data-next-page="inicio.html"
+                data-profile-name="Nahu"
+                data-profile-image="assets/perfiles/nahu.jpg"
+                data-profile-position="62% 42%"
+              >
+                <span class="media-frame profile-avatar profile-avatar--nahu">
+                  <img src="assets/perfiles/nahu.jpg" alt="Avatar de Nahu" />
+                  <span class="media-fallback avatar-helmet" aria-hidden="true"></span>
+                </span>
+                <span class="profile-card__name">Nahu</span>
+              </button>
+            </li>
+            <li>
+              <button
+                class="profile-card"
+                type="button"
+                data-next-page="inicio.html"
+                data-profile-name="Bi y Bu"
+                data-profile-image="assets/perfiles/bi.jpeg"
+                data-profile-position="48% 36%"
+              >
+                <span class="media-frame profile-avatar profile-avatar--bi">
+                  <img src="assets/perfiles/bi.jpeg" alt="Avatar de Bi y Bu" />
+                  <span class="media-fallback avatar-furry" aria-hidden="true"></span>
+                </span>
+                <span class="profile-card__name">Bi y Bu</span>
+              </button>
+            </li>
+            <li class="profile-edit-item">
+              <button class="profile-card profile-card--edit" type="button">
+                <span class="profile-avatar profile-avatar--edit" aria-hidden="true"></span>
+                <span class="profile-card__name">Editar</span>
+              </button>
+            </li>
+          </ul>
+          <button class="manage-profiles" type="button">Administrar perfiles</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

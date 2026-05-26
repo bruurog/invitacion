@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Netflix</title>
+    <link rel="icon" type="image/png" href="assets/logos/logo2.png" />
+    <link rel="apple-touch-icon" href="assets/logos/logo2.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="screen browse-screen" aria-label="Página de inicio de Netflix">
+        <div class="home-hero">
+          <div class="media-frame home-hero__image">
+            <video
+              class="hero-video"
+              src="assets/principal/video-fondo.mp4"
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="auto"
+              aria-label="Escena principal de Déjate llevar"
+            ></video>
+            <div class="media-fallback cinematic-fallback" aria-hidden="true"></div>
+          </div>
+
+          <header class="topbar topbar--browse">
+            <a class="netflix-logo" href="inicio.html" aria-label="Netflix">
+              <img src="assets/logos/logo.png" alt="Netflix" />
+            </a>
+            <nav class="browse-nav" aria-label="Navegación principal">
+              <a href="inicio.html">Inicio</a>
+              <a href="inicio.html">Series</a>
+              <a href="inicio.html">Películas</a>
+              <a href="inicio.html">Nuevo y popular</a>
+              <a href="inicio.html">Juegos</a>
+              <a href="inicio.html">Mi lista</a>
+            </nav>
+            <div class="browse-tools" aria-label="Herramientas de cuenta">
+              <button class="icon-button icon-button--cast mobile-only" type="button" aria-label="Enviar a pantalla"></button>
+              <button class="icon-button icon-button--download mobile-only" type="button" aria-label="Descargas"></button>
+              <button class="icon-button icon-button--search" type="button" aria-label="Buscar"></button>
+              <button class="icon-button icon-button--bell" type="button" aria-label="Notificaciones">
+                <span class="notification-badge">5</span>
+              </button>
+              <button class="profile-menu" type="button" aria-label="Abrir menú de perfil">
+                <span class="media-frame profile-menu__avatar">
+                  <img src="assets/perfiles/bi.jpeg" alt="Perfil Bi y Bu" data-selected-profile-image />
+                  <span class="media-fallback small-avatar" aria-hidden="true"></span>
+                </span>
+                <span class="chevron chevron--white" aria-hidden="true"></span>
+              </button>
+            </div>
+          </header>
+
+          <div class="home-hero__content">
+            <div class="media-frame title-art title-art--large">
+              <img src="assets/dejate-llevar-logo.png" alt="Logo de Déjate llevar" />
+              <div class="media-fallback title-art__fallback" aria-hidden="true">
+                <img class="title-art__netflix-logo" src="assets/logos/logo.png" alt="Netflix" />
+                <strong>Déjate<br />amar</strong>
+              </div>
+            </div>
+            <p>
+              Una de las primeras veces que te veia, los nervios y la inseguridad se mezclaban en mi corazón, pero gracias a dios no me gano
+              y pude conocer a lo que considero mi alma gemela.
+            </p>
+            <div class="hero-actions">
+              <button class="play-button" type="button">
+                <span class="play-icon" aria-hidden="true"></span>
+                Reproducir
+              </button>
+              <button class="info-button" type="button" data-modal-open="detalle-pelicula">
+                <span class="info-icon" aria-hidden="true">i</span>
+                Más información
+              </button>
+            </div>
+          </div>
+
+          <div class="hero-side-controls">
+            <button class="round-button round-button--sound" type="button" aria-label="Activar sonido"></button>
+            <span class="age-tag">14+</span>
+          </div>
+        </div>
+
+        <section class="content-rail content-rail--events content-rail--landscape" aria-labelledby="rail-wwe">
+          <div class="rail-heading">
+            <h2 id="rail-wwe">Proximamente</h2>
+            <div class="rail-controls" aria-hidden="false">
+              <span class="rail-position" aria-hidden="true"></span>
+              <button class="rail-arrow rail-arrow--prev" type="button" aria-label="Ver eventos anteriores" data-rail-prev>
+                <img src="assets/icons/izquierda.png" alt="" />
+              </button>
+              <button class="rail-arrow rail-arrow--next" type="button" aria-label="Ver más eventos" data-rail-next>
+                <img src="assets/icons/derecha.png" alt="" />
+              </button>
+            </div>
+          </div>
+          <div class="rail-track">
+            <article
+              class="media-card media-card--event cumple-bri"
+              role="button"
+              tabindex="0"
+              aria-label="Abrir detalle de ¿Me aceptarias una cita?"
+              data-modal-open="detalle-cita"
+            >
+              <div class="media-frame card-image">
+                <img src="assets/events/fc.jpg" alt="Cumple Bi" />
+                <div class="media-fallback card-fallback card-fallback--silver" aria-hidden="true"></div>
+              </div>
+              <p class="event-meta">
+                <strong>01 de junio de 2026</strong>
+                <span>00:00 (hora estándar de Argentina)</span>
+              </p>
+            </article>
+            <article class="media-card media-card--event">
+              <div class="media-frame card-image">
+                <img src="assets/events/fc-bu.png" alt="Cumple Bu" />
+                <div class="media-fallback card-fallback card-fallback--blue"  aria-hidden="true"></div>
+              </div>
+              <p class="event-meta">
+                <strong>02 de junio de 2026</strong>
+                <span>00:00 (hora estándar de Argentina)</span>
+              </p>
+            </article>
+            <article class="media-card media-card--event">
+              <div class="media-frame card-image">
+                <img src="assets/events/barilo.jpg" alt="Bariloche Bri" />
+                <div class="media-fallback card-fallback card-fallback--gold" data-title="Bariloche Bri" aria-hidden="true"></div>
+              </div>
+              <p class="event-meta">
+                <strong>Julio/Agosto 2026</strong>
+                <span>06:00 (hora estándar de Argentina)</span>
+              </p>
+            </article>
+            <article class="media-card media-card--event">
+              <div class="media-frame card-image">
+                <img src="assets/events/proximamente.png" alt="Proxima invitacion a casa" />
+                <div class="media-fallback card-fallback card-fallback--gold" data-title="Invitar a bri" aria-hidden="true"></div>
+              </div>
+              <p class="event-meta">
+                <strong>12 de junio de 2026</strong>
+                <span>21:00 (hora estándar de Argentina)</span>
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="content-rail content-rail--landscape" aria-labelledby="rail-mi-lista">
+          <div class="rail-heading">
+            <h2 id="rail-mi-lista">Mis momentos favoritos</h2>
+            <div class="rail-controls" aria-hidden="false">
+              <span class="rail-position rail-position--long" aria-hidden="true"></span>
+              <button class="rail-arrow rail-arrow--prev" type="button" aria-label="Ver títulos anteriores de mi lista" data-rail-prev>
+                <img src="assets/icons/izquierda.png" alt="" />
+              </button>
+              <button class="rail-arrow rail-arrow--next" type="button" aria-label="Ver más títulos de mi lista" data-rail-next>
+                <img src="assets/icons/derecha.png" alt="" />
+              </button>
+            </div>
+          </div>
+          <div class="rail-track">
+            <article class="media-card">
+              <div class="media-frame card-image">
+                <img src="assets/moments-favs/fav1.jpeg" alt="Momento favorito 1" />
+                <div class="media-fallback card-fallback card-fallback--romance" data-title="Concierto" aria-hidden="true"></div>
+              </div>
+            </article>
+            <article class="media-card">
+              <div class="media-frame card-image">
+                <img src="assets/moments-favs/fav2.jpeg" alt="Momento favorito 2" />
+                <div class="media-fallback card-fallback card-fallback--summer" data-title="Último día juntos" aria-hidden="true"></div>
+              </div>
+            </article>
+            <article class="media-card">
+              <div class="media-frame card-image">
+                <img src="assets/moments-favs/fav3.jpg" alt="Momento favorito 3" />
+                <div class="media-fallback card-fallback card-fallback--letters" data-title="Primera vez" aria-hidden="true"></div>
+              </div>
+            </article>
+            <article class="media-card">
+              <div class="media-frame card-image">
+                <img src="assets/moments-favs/fav4.jpeg" alt="Momento favorito 4" />
+                <div class="media-fallback card-fallback card-fallback--destiny" data-title="Merienda" aria-hidden="true"></div>
+              </div>
+            </article>
+            <article class="media-card">
+              <div class="media-frame card-image">
+                <img src="assets/moments-favs/fav5.jpeg" alt="Momento favorito 5" />
+                <div class="media-fallback card-fallback card-fallback--city" data-title="Mi bebe" aria-hidden="true"></div>
+              </div>
+            </article>
+            <article class="media-card">
+              <div class="media-frame card-image">
+                <img src="assets/moments-favs/fav6.jpg" alt="Momento favorito 6" />
+                <div class="media-fallback card-fallback card-fallback--smile" data-title="En casa" aria-hidden="true"></div>
+              </div>
+            </article>
+            <article class="media-card">
+              <div class="media-frame card-image">
+                <img src="assets/moments-favs/fav7.jpg" alt="Momento favorito 7" />
+                <div class="media-fallback card-fallback card-fallback--warm" data-title="Pumple xv" aria-hidden="true"></div>
+              </div>
+            </article>
+            <article class="media-card">
+              <div class="media-frame card-image">
+                <img src="assets/moments-favs/fav8.jpeg" alt="Momento favorito 8" />
+                <div class="media-fallback card-fallback card-fallback--sheldon" data-title="Pre Joda" aria-hidden="true"></div>
+              </div>
+            </article>
+            <article class="media-card">
+              <div class="media-frame card-image">
+                <img src="assets/moments-favs/fav9.jpg" alt="Momento favorito 9" />
+                <div class="media-fallback card-fallback card-fallback--flash" data-title="Nosotros" aria-hidden="true"></div>
+              </div>
+            </article>
+            <article class="media-card">
+              <div class="media-frame card-image">
+                <img src="assets/moments-favs/fav10.png" alt="Momento favorito 10" />
+                <div class="media-fallback card-fallback card-fallback--super" data-title="2024" aria-hidden="true"></div>
+              </div>
+            </article>
+            <article class="media-card">
+              <div class="media-frame card-image">
+                <img src="assets/moments-favs/fav11.jpg" alt="Momento favorito 11" />
+                <div class="media-fallback card-fallback card-fallback--house" data-title="Ramo" aria-hidden="true"></div>
+              </div>
+            </article>
+            <article class="media-card">
+              <div class="media-frame card-image">
+                <img src="assets/moments-favs/fav12.jpeg" alt="Momento favorito 12" />
+                <div class="media-fallback card-fallback card-fallback--vampire" data-title="Primeras Pelis" aria-hidden="true"></div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="content-rail content-rail--landscape content-rail--continue" aria-labelledby="rail-continuar">
+          <div class="rail-heading">
+            <h2 id="rail-continuar">Continuar viendo</h2>
+            <div class="rail-controls" aria-hidden="false">
+              <span class="rail-position rail-position--long" aria-hidden="true"></span>
+              <button class="rail-arrow rail-arrow--prev" type="button" aria-label="Ver títulos vistos antes" data-rail-prev>
+                <img src="assets/icons/izquierda.png" alt="" />
+              </button>
+              <button class="rail-arrow rail-arrow--next" type="button" aria-label="Ver más títulos para continuar" data-rail-next>
+                <img src="assets/icons/derecha.png" alt="" />
+              </button>
+            </div>
+          </div>
+          <div class="rail-track">
+            <article class="media-card">
+              <div class="media-frame card-image">
+                <img src="assets/contenido/cont1.jpg" alt="Bi + Burger" />
+                <div class="media-fallback card-fallback card-fallback--vampire" data-title="Burger de Bri" aria-hidden="true"></div>
+                <span class="watch-progress" style="--progress: 52%"></span>
+              </div>
+            </article>
+            <article class="media-card">
+              <div class="media-frame card-image">
+                <img src="assets/contenido/cont2.jpg" alt="Contenido 2" />
+                <div class="media-fallback card-fallback card-fallback--law" data-title="TBR" aria-hidden="true"></div>
+                <span class="watch-progress" style="--progress: 31%"></span>
+              </div>
+            </article>
+            <article class="media-card">
+              <div class="media-frame card-image">
+                <img src="assets/contenido/cont3.jpg" alt="Contenido 3" />
+                <div class="media-fallback card-fallback card-fallback--warm" data-title="Bri 14/02" aria-hidden="true"></div>
+                <span class="watch-progress" style="--progress: 72%"></span>
+              </div>
+            </article>
+            <article class="media-card">
+              <div class="media-frame card-image">
+                <img src="assets/contenido/cont4.jpg" alt="Contenido 4" />
+                <div class="media-fallback card-fallback card-fallback--sheldon" data-title="Beso cute" aria-hidden="true"></div>
+                <span class="watch-progress" style="--progress: 46%"></span>
+              </div>
+            </article>
+            <article class="media-card">
+              <div class="media-frame card-image">
+                <img src="assets/contenido/cont5.jpg" alt="Contenido 5" />
+                <div class="media-fallback card-fallback card-fallback--viking" data-title="Nuestros Ojos" aria-hidden="true"></div>
+                <span class="watch-progress" style="--progress: 18%"></span>
+              </div>
+            </article>
+            <article class="media-card">
+              <div class="media-frame card-image">
+                <img src="assets/contenido/cont6.jpg" alt="Contenido 6" />
+                <div class="media-fallback card-fallback card-fallback--sunset" data-title="Bigotitos" aria-hidden="true"></div>
+                <span class="watch-progress" style="--progress: 24%"></span>
+              </div>
+            </article>
+            <article class="media-card">
+              <div class="media-frame card-image">
+                <img src="assets/contenido/cont7.jpg" alt="Contenido 7" />
+                <div class="media-fallback card-fallback card-fallback--sunset" data-title="Hermosa" aria-hidden="true"></div>
+                <span class="watch-progress" style="--progress: 24%"></span>
+              </div>
+            </article>
+            <article class="media-card">
+              <div class="media-frame card-image">
+                <img src="assets/contenido/cont8.jpg" alt="Contenido 8" />
+                <div class="media-fallback card-fallback card-fallback--sunset" data-title="Mi bebe" aria-hidden="true"></div>
+                <span class="watch-progress" style="--progress: 24%"></span>
+              </div>
+            </article>
+            <article class="media-card">
+              <div class="media-frame card-image">
+                <img src="assets/contenido/cont9.jpeg" alt="Contenido 9" />
+                <div class="media-fallback card-fallback card-fallback--sunset" data-title="Me modela" aria-hidden="true"></div>
+                <span class="watch-progress" style="--progress: 24%"></span>
+              </div>
+            </article>
+            <article class="media-card">
+              <div class="media-frame card-image">
+                <img src="assets/contenido/cont10.jpeg" alt="Contenido 10" />
+                <div class="media-fallback card-fallback card-fallback--sunset" data-title="Motito" aria-hidden="true"></div>
+                <span class="watch-progress" style="--progress: 24%"></span>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="content-rail content-rail--landscape" aria-labelledby="rail-recomendados">
+          <div class="rail-heading">
+            <h2 id="rail-recomendados">Porque elegirnos?</h2>
+            <div class="rail-controls" aria-hidden="false">
+              <span class="rail-position rail-position--long" aria-hidden="true"></span>
+              <button class="rail-arrow rail-arrow--prev" type="button" aria-label="Ver recomendaciones anteriores" data-rail-prev>
+                <img src="assets/icons/izquierda.png" alt="" />
+              </button>
+              <button class="rail-arrow rail-arrow--next" type="button" aria-label="Ver más recomendaciones" data-rail-next>
+                <img src="assets/icons/derecha.png" alt="" />
+              </button>
+            </div>
+          </div>
+          <div class="rail-track">
+            <article class="media-card">
+              <div class="media-frame card-image">
+                <img src="assets/elegirnos/hijo.jpeg" alt="Meme" />
+                <div class="media-fallback card-fallback card-fallback--romance" data-title="Memito" aria-hidden="true"></div>
+              </div>
+            </article>
+            <article class="media-card">
+              <div class="media-frame card-image">
+                <img src="assets/elegirnos/nuna.jpeg" alt="Nuna" />
+                <div class="media-fallback card-fallback card-fallback--summer" data-title="Nuna" aria-hidden="true"></div>
+              </div>
+            </article>
+            <article class="media-card">
+              <div class="media-frame card-image">
+                <img src="assets/elegirnos/bi01.jpeg" alt="Bi Loca" />
+                <div class="media-fallback card-fallback card-fallback--letters" data-title="El amor de mi vida" aria-hidden="true"></div>
+              </div>
+            </article>
+            <article class="media-card">
+              <div class="media-frame card-image">
+                <img src="assets/elegirnos/beso1.jpg" alt="Beso Lengua" />
+                <div class="media-fallback card-fallback card-fallback--destiny" data-title="Lengua" aria-hidden="true"></div>
+              </div>
+            </article>
+            <article class="media-card">
+              <div class="media-frame card-image">
+                <img src="assets/elegirnos/hijo3.jpeg" alt="Hijo peluchito 1" />
+                <div class="media-fallback card-fallback card-fallback--city" data-title="Bebito" aria-hidden="true"></div>
+              </div>
+            </article>
+            <article class="media-card">
+              <div class="media-frame card-image">
+                <img src="assets/elegirnos/mimir1.jpeg" alt="Mimir 1" />
+                <div class="media-fallback card-fallback card-fallback--smile" data-title="Mimida" aria-hidden="true"></div>
+              </div>
+            </article>
+            <article class="media-card">
+              <div class="media-frame card-image">
+                <img src="assets/elegirnos/hijo4.jpeg" alt="Hijo peluchito 2" />
+                <div class="media-fallback card-fallback card-fallback--smile" data-title="Titito" aria-hidden="true"></div>
+              </div>
+            </article>
+            <article class="media-card">
+              <div class="media-frame card-image">
+                <img src="assets/elegirnos/peligro1.jpeg" alt="Bri Manejando" />
+                <div class="media-fallback card-fallback card-fallback--smile" data-title="Peligro al volante" aria-hidden="true"></div>
+              </div>
+            </article>
+            <article class="media-card">
+              <div class="media-frame card-image">
+                <img src="assets/elegirnos/cutes.jpeg" alt="Cutes" />
+                <div class="media-fallback card-fallback card-fallback--smile" data-title="Maquillaje" aria-hidden="true"></div>
+              </div>
+            </article>
+            <article class="media-card">
+              <div class="media-frame card-image">
+                <img src="assets/elegirnos/mimir2.jpeg" alt="Mimir 2" />
+                <div class="media-fallback card-fallback card-fallback--smile" data-title="Mimidita" aria-hidden="true"></div>
+              </div>
+            </article>
+            <article class="media-card">
+              <div class="media-frame card-image">
+                <img src="assets/elegirnos/video-llamada.png" alt="Video llamada" />
+                <div class="media-fallback card-fallback card-fallback--smile" data-title="Me enamore" aria-hidden="true"></div>
+              </div>
+            </article>
+            <article class="media-card">
+              <div class="media-frame card-image">
+                <img src="assets/elegirnos/xv-feliz.jpg" alt="xv bi" />
+                <div class="media-fallback card-fallback card-fallback--smile" data-title="Nosotros" aria-hidden="true"></div>
+              </div>
+            </article>
+          </div>
+        </section>
+      </section>
+
+      <nav class="mobile-bottom-nav" aria-label="Navegación inferior">
+        <a class="mobile-bottom-nav__item is-active" href="inicio.html">
+          <span class="mobile-bottom-nav__icon mobile-bottom-nav__icon--home" aria-hidden="true"></span>
+          Inicio
+        </a>
+        <a class="mobile-bottom-nav__item" href="inicio.html">
+          <span class="mobile-bottom-nav__icon mobile-bottom-nav__icon--search" aria-hidden="true"></span>
+          Buscar
+        </a>
+        <a class="mobile-bottom-nav__item" href="perfiles.html">
+          <span class="media-frame mobile-bottom-nav__avatar">
+            <img src="assets/perfiles/bi.jpeg" alt="" data-selected-profile-image />
+          </span>
+          Mi Netflix
+        </a>
+      </nav>
+
+      <aside class="hover-preview" data-hover-preview hidden aria-hidden="true">
+        <div class="media-frame hover-preview__image">
+          <img src="" alt="" data-hover-preview-image />
+          <img class="hover-preview__netflix-mark" src="assets/logos/logo2.png" alt="Netflix" />
+          <strong class="hover-preview__title" data-hover-preview-title></strong>
+        </div>
+        <div class="hover-preview__body">
+          <div class="hover-preview__actions" aria-label="Acciones rápidas">
+            <button class="hover-preview__button hover-preview__button--play" type="button" aria-label="Reproducir vista previa" data-hover-preview-play>
+              <span class="hover-preview__play-icon" aria-hidden="true"></span>
+            </button>
+            <button class="round-button round-button--plus hover-preview__round" type="button" aria-label="Agregar a mi lista"></button>
+            <button class="round-button round-button--like hover-preview__round" type="button" aria-label="Me gusta"></button>
+            <button class="hover-preview__button hover-preview__button--more" type="button" aria-label="Ver más información" data-hover-preview-play></button>
+          </div>
+          <div class="hover-preview__meta">
+            <span class="hover-preview__rating">17+</span>
+            <span data-hover-preview-meta>Momentos favoritos</span>
+            <span class="hover-preview__quality">HD</span>
+          </div>
+          <p class="hover-preview__tags">Romántico <span>•</span> Emotivo <span>•</span> Recuerdos</p>
+        </div>
+      </aside>
+
+      <div class="detail-overlay" id="detalle-pelicula" role="dialog" aria-modal="true" aria-label="Más información de Déjate amar" hidden>
+        <div class="detail-overlay__backdrop" data-modal-close></div>
+        <article class="detail-modal">
+          <div class="detail-modal__hero">
+            <div class="media-frame detail-modal__image">
+              <video
+                id="detalle-video"
+                class="modal-video"
+                src="assets/principal/video-fondo.mp4"
+                loop
+                playsinline
+                preload="auto"
+                aria-label="Escena destacada de Déjate amar"
+              ></video>
+              <div class="media-fallback modal-fallback" aria-hidden="true"></div>
+            </div>
+            <button class="modal-close" type="button" aria-label="Cerrar detalle" data-modal-close></button>
+
+            <div class="detail-modal__hero-content">
+              <div class="media-frame title-art title-art--modal">
+                <img src="assets/dejate-llevar-logo.png" alt="Logo de Déjate amar" />
+                <div class="media-fallback title-art__fallback" aria-hidden="true">
+                  <img class="title-art__netflix-logo" src="assets/logos/logo.png" alt="Netflix" />
+                  <strong>Déjate<br />amar</strong>
+                </div>
+              </div>
+              <div class="modal-actions">
+                <button class="play-button play-button--modal" type="button">
+                  <span class="play-icon" aria-hidden="true"></span>
+                  Reproducir
+                </button>
+                <button class="round-button round-button--plus" type="button" aria-label="Agregar a mi lista"></button>
+                <button class="round-button round-button--like" type="button" aria-label="Me gusta"></button>
+              </div>
+            </div>
+
+            <button
+              class="round-button round-button--sound detail-modal__sound"
+              type="button"
+              aria-label="Silenciar"
+              data-video-toggle="#detalle-video"
+            ></button>
+          </div>
+
+          <div class="detail-modal__body">
+            <div class="detail-grid">
+              <div class="detail-copy">
+                <div class="meta-line">
+                  <span>2023</span>
+                  <span>01h 06min 06seg</span>
+                  <span class="quality-badge">HD</span>
+                  <span class="audio-badge">AD</span>
+                  <span class="subtitle-badge" aria-hidden="true"></span>
+                </div>
+                <div class="rating-line">
+                  <span class="rating-badge">13+</span>
+                  <span>Lenguaje inapropiado - Violencia - Odio</span>
+                </div>
+                <p>
+                  Una de las primeras veces que te veia, los nervios y la inseguridad se mezclaban en mi corazón, pero
+                  gracias a dios no me gano y pude conocer a lo que considero mi alma gemela.
+                </p>
+              </div>
+
+              <aside class="detail-facts" aria-label="Datos del título">
+                <p><span>Elenco:</span> Brisa Czencz, Bruno Rogora</p>
+                <p><span>Géneros:</span> Cine dramático, Cine romántico, Películas basadas en libros</p>
+                <p><span>Este título es sobre:</span> Enamorarse, Optimista, Amores</p>
+              </aside>
+            </div>
+
+            <section class="similar-section" aria-labelledby="similar-title">
+              <h2 id="similar-title">Más títulos similares a este</h2>
+              <div class="similar-grid">
+                <article class="similar-card similar-card--video" data-cover-title="Te amo" data-redirect-page="animacion-netflix.html?video=tiktok1" role="button" tabindex="0">
+                  <div class="media-frame similar-card__image">
+                    <img src="assets/videos/tiktok1-foto.png" alt="Portada del video 1" />
+                    <div class="media-fallback similar-fallback similar-fallback--blue" aria-hidden="true"></div>
+                  </div>
+                </article>
+                <article class="similar-card similar-card--video" data-cover-title="con" data-redirect-page="animacion-netflix.html?video=tiktok2" role="button" tabindex="0">
+                  <div class="media-frame similar-card__image">
+                    <img src="assets/videos/tiktok2-foto.png" alt="Portada del video 2" />
+                    <div class="media-fallback similar-fallback similar-fallback--white" aria-hidden="true"></div>
+                  </div>
+                </article>
+                <article class="similar-card similar-card--video" data-cover-title="el alma" data-redirect-page="animacion-netflix.html?video=tiktok3" role="button" tabindex="0">
+                  <div class="media-frame similar-card__image">
+                    <img src="assets/videos/tiktok3-foto.png" alt="Portada del video 3" />
+                    <div class="media-fallback similar-fallback similar-fallback--green" aria-hidden="true"></div>
+                  </div>
+                </article>
+              </div>
+            </section>
+          </div>
+        </article>
+      </div>
+
+      <div class="detail-overlay" id="detalle-cita" role="dialog" aria-modal="true" aria-label="Más información de ¿Me aceptarias una cita?" hidden>
+        <div class="detail-overlay__backdrop" data-modal-close></div>
+        <article class="detail-modal">
+          <div class="detail-modal__hero">
+            <div class="media-frame detail-modal__image">
+              <video
+                id="cita-video"
+                class="modal-video"
+                src="assets/principal/video2.mp4"
+                loop
+                playsinline
+                preload="auto"
+                aria-label="Escena destacada de ¿Me aceptarias una cita?"
+              ></video>
+              <div class="media-fallback modal-fallback" aria-hidden="true"></div>
+            </div>
+            <button class="modal-close" type="button" aria-label="Cerrar detalle" data-modal-close></button>
+
+            <div class="detail-modal__hero-content">
+              <div class="media-frame title-art title-art--modal title-art--question">
+                <img src="assets/cita-logo.png" alt="Logo de ¿Me aceptarias una cita?" />
+                <div class="media-fallback title-art__fallback" aria-hidden="true">
+                  <img class="title-art__netflix-logo" src="assets/logos/logo.png" alt="Netflix" />
+                  <strong>¿me aceptarias<br />una cita?</strong>
+                </div>
+              </div>
+              <div class="modal-actions">
+                <button class="play-button play-button--modal" type="button" data-redirect-page="animacion-netflix.html">
+                  <span class="play-icon" aria-hidden="true"></span>
+                  Reproducir
+                </button>
+                <button class="round-button round-button--plus" type="button" aria-label="Agregar a mi lista"></button>
+                <button class="round-button round-button--like" type="button" aria-label="Me gusta"></button>
+              </div>
+            </div>
+
+            <button
+              class="round-button round-button--sound detail-modal__sound"
+              type="button"
+              aria-label="Silenciar"
+              data-video-toggle="#cita-video"
+            ></button>
+          </div>
+
+          <div class="detail-modal__body">
+            <div class="detail-grid">
+              <div class="detail-copy">
+                <div class="meta-line">
+                  <span>2023</span>
+                  <span>02h 06min 06seg</span>
+                  <span class="quality-badge">HD</span>
+                  <span class="audio-badge">AD</span>
+                  <span class="subtitle-badge" aria-hidden="true"></span>
+                </div>
+                <div class="rating-line">
+                  <span class="rating-badge">13+</span>
+                  <span>Lenguaje inapropiado - Amor - Celos</span>
+                </div>
+                <p>
+                  Sinceramente vengo pensando hace mucho en proponerte algo de esta forma, y no se me ocurre mejor idea que hacerlo para tu cumpleaños.
+                    Una cita, un encuentro, una salida, como quieras llamarlo, pero la idea es pasar un momento juntos y disfrutar de algo lindo.
+                      Espero que te guste la idea y que podamos compartir este año si, un momento lindo juntos en estas fechas, te amo con el alma mi bi.
+                </p>
+              </div>
+
+              <aside class="detail-facts" aria-label="Datos del título">
+                <p><span>Elenco:</span> Brisa Czencz, Bruno Rogora</p>
+                <p><span>Plan:</span> Cine, McDonals, Helado, Plaza, Centro</p>
+                <p><span>Este título es sobre:</span> Reencontrarse, Amor, Hacer algo lindo juntos</p>
+              </aside>
+            </div>
+
+            <section class="similar-section" aria-labelledby="similar-cita-title">
+              <h2 id="similar-cita-title">Videos que no me anime a subir</h2>
+              <div class="similar-grid">
+                <article class="similar-card similar-card--video" data-cover-title="Te amo" data-redirect-page="animacion-netflix.html?video=tiktok1" role="button" tabindex="0">
+                  <div class="media-frame similar-card__image">
+                    <img src="assets/videos/tiktok1-foto.png" alt="Portada del video 1" />
+                    <div class="media-fallback similar-fallback similar-fallback--blue" aria-hidden="true"></div>
+                  </div>
+                </article>
+                <article class="similar-card similar-card--video" data-cover-title="con" data-redirect-page="animacion-netflix.html?video=tiktok2" role="button" tabindex="0">
+                  <div class="media-frame similar-card__image">
+                    <img src="assets/videos/tiktok2-foto.png" alt="Portada del video 2" />
+                    <div class="media-fallback similar-fallback similar-fallback--white" aria-hidden="true"></div>
+                  </div>
+                </article>
+                <article class="similar-card similar-card--video" data-cover-title="el alma" data-redirect-page="animacion-netflix.html?video=tiktok3" role="button" tabindex="0">
+                  <div class="media-frame similar-card__image">
+                    <img src="assets/videos/tiktok3-foto.png" alt="Portada del video 3" />
+                    <div class="media-fallback similar-fallback similar-fallback--green" aria-hidden="true"></div>
+                  </div>
+                </article>
+              </div>
+            </section>
+          </div>
+        </article>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
